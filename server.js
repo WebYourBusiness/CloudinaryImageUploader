@@ -6,6 +6,13 @@ const connectionString = 'mongodb://Satanaso:1qazxsw2@ds133260.mlab.com:33260/mo
 const collections = ['images-collection'];
 
 const db = mongojs(connectionString, collections);
+db.on('error', function (err) {
+    console.log('Database error: ' + err)
+})
+
+db.on('connect', function () {
+    console.log('Database connected...')
+})
 
 // EXPRESS config
 const express = require('express'),

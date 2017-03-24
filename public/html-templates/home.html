@@ -1,0 +1,22 @@
+<div id="cloudinary-image-uploader" class="row">
+	<div class="col">
+		<label for="uploader">Select image: </label>
+		<input id="file-upload" type="file" name="uploader" value="Upload" onchange="previewFile()">
+		<br><br>
+		<img id="image-preview" src="" width="350px" height="350px" name="image" alt="image preview"><br>
+		<button type="submit" onclick="uploadImage()">UPLOAD IMAGE</button> with tag :
+		<select id="select-tag">
+			<option value="0">Витражи</option>
+			<option value="1">Аксесоари</option>
+			<option value="2">Интериор</option>
+			<option value="3">Събития</option>
+		</select>
+	</div>
+	<div class="col">
+		<br><br>
+		<div>
+			<label for="uploaded-image">Uploaded images:</label><br>
+			<ul id="uploaded-images"></ul>
+		</div>
+	</div>
+</div>

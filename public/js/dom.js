@@ -41,9 +41,15 @@ function postImage(url, data, contentType, tag) {
 
 			let labelTag = document.createElement('label');
 			labelTag.innerHTML += imageObj.tag;
+			labelTag.style.margin = '2px';
 
-			document.getElementById('uploaded-images').appendChild(labelTag);
-			document.getElementById('uploaded-images').appendChild(img);
+			let imageContainer = document.createElement('div');
+			imageContainer.className += ' imageContainer'
+
+			imageContainer.appendChild(labelTag);
+			imageContainer.appendChild(img);
+		
+			document.getElementById('uploaded-images').appendChild(imageContainer);
 		})
 		.catch(function (error) {
 			console.log(error);
