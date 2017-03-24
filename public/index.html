@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>GalleryDataControl</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./images/l.png" rel="icon">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<br><br>
+	<div id="cloudinary-image-uploader" class="center">
+		<h3>Cloudinary Image Uploader</h3>
+		<label for="uploader">Select image: </label>
+		<input id="file-upload" type="file" name="uploader" value="Upload" onchange="previewFile()">
+		<br><br>
+		<img id="image-preview" src="" width="350px" height="350px" name="image" alt="image preview"><br>
+		<button type="submit" onclick="uploadImage()">UPLOAD IMAGE</button> with tag :
+		<select id="select-tag">
+			<option value="0">Витражи</option>
+			<option value="1">Аксесоари</option>
+			<option value="2">Интериор</option>
+			<option value="3">Събития</option>
+		</select>
+		<br><br>
+		<div>
+			<label for="uploaded-image">Uploaded images:</label>
+			<ul id="uploaded-images"></ul>
+		</div>
+	</div>
+
+	<script src="./js/axios.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
