@@ -33,3 +33,9 @@ body {
 #uploading-message {
 	color: darkblue;
 }
+
+#submit-upload {
+	border: 1px solid black;
+	background-color: linen;
+	font-weight: bold
+}

@@ -1,6 +1,7 @@
 'use strict';
 
 let imageFile, imagePreview;
+
 function previewFile() {
 	imagePreview = document.querySelector('img');
 	imageFile = document.querySelector('input[type=file]').files[0];
@@ -40,8 +41,21 @@ function uploadImage() {
 				})
 				.then((res) => {
 					let imageObj = {
+						tag: tag,
 						url: res.secure_url
 					};
+
+					switch (tag) {
+						case 'events': data.postData('/api/image/events', imageObj);
+							break;
+						case 'accessories': data.postData('/api/image/accessories', imageObj);
+							break;
+						case 'stained-glasses': data.postData('/api/image/stained-glasses', imageObj);
+							break;
+						case 'interiors': data.postData('/api/image/interiors', imageObj);
+							break;
+					}
+
 					return imageObj;
 				})
 				.then((imageObj) => {

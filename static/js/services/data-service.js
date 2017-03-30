@@ -19,6 +19,13 @@ const data = (() => {
 			}
 			return this.requester.post(url, options);
 		}
+
+		postData(url, data) {
+			const options = {
+				data: data
+			}
+			return this.requester.post(url, options);
+		}
 	}
 
 	const dataObj = new Data(ajaxRequester);
