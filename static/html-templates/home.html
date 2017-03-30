@@ -1,5 +1,5 @@
-<div id="cloudinary-image-uploader" class="row">
-	<div class="col">
+<div id="cloudinary-image-uploader" class="flex-container">
+	<div class="flex-item-1">
 		<label for="uploader">Select image: </label>
 		<input id="file-upload" type="file" name="uploader" value="Upload" onchange="previewFile()">
 		<br><br>
@@ -12,11 +12,11 @@
 			<option value="3">Събития</option>
 		</select>
 	</div>
-	<div class="col">
+	<div class="flex-item-2">
 		<br><br>
 		<div>
 			<label for="uploaded-image">Uploaded images:</label><br>
-			<ul id="uploaded-images"></ul>
+			<ul id="uploaded-images" class="flex-container"></ul>
 		</div>
 	</div>
 </div>
